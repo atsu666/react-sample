@@ -7,7 +7,17 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  module: {
+  eslint: {
+    configFile: './.eslintrc'
+  },
+  module: {a
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: "eslint-loader",
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test: /.jsx?$/,
@@ -18,8 +28,5 @@ module.exports = {
         }
       }
     ]
-  },
-  eslint: {
-    configFile: './.eslintrc'
   }
 }
