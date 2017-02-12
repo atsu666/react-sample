@@ -11,6 +11,6 @@ export default function todos(state = initialState, action) {
     case types.INCREMENT:
       return state.count + 1;
     default:
-      return state.count;
+      return state;
   }
 }
