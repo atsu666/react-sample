@@ -1,4 +1,4 @@
 import React from 'react';
 
-const World = () => <h1>World</h1>;
+const World = () => <h1>World2</h1>;
 export default World;

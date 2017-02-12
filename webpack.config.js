@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/main.jsx',
@@ -36,17 +35,5 @@ module.exports = {
         loader: 'url-loader'
       }
     ]
-  },
-  plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: './src/index.html'
-      }
-    ]),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+  }
 }
