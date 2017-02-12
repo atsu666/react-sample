@@ -14,15 +14,6 @@ class App extends React.Component {
   }
 }
 
-App.defaultProps = {
-  count: 0
-};
-
-App.propTypes = {
-  count: React.PropTypes.number,
-  handleClick: React.PropTypes.func
-};
-
 function mapStateToProps(state) {
   return state;
 }

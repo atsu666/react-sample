@@ -9,7 +9,3 @@ export default class Hoge extends React.Component {
   }
 }
 
-Hoge.propTypes = {
-  count: PropTypes.number.isRequired
-};
-
