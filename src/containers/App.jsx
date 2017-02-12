@@ -1,27 +1,32 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import React from 'react';
-import Hello from '../components/hello';
-import World from '../components/world';
+// import Hello from '../components/hoge';
+import { increment } from '../actions';
 
+class App extends React.Component {
+  render() {
+    return (<div>
+      <span>count: {this.props.count}</span>
+      <button onClick={ () => this.props.handleClick() }>増加</button>
+    </div>)
+  }
+}
 
-const App = () => (
-  <div>
-    <Hello />
-    <World />
-  </div>
-);
+App.defaultProps = {
+  count: 0
+}
 
+function mapStateToProps(state) {
+  return state;
+}
 
-App.propTypes = {
-  // item: PropTypes.object.isRequired,
-  // actions: PropTypes.object.isRequired,
-};
-
-const mapStateToProps = state => state;
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(dispatch),
-});
+function mapDispatchToProps(dispatch) {
+  return {
+    handleClick: () => {
+      dispatch(increment())
+    }
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

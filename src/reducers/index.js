@@ -1,8 +1,15 @@
 import { combineReducers } from 'redux';
-import increment from './increment';
+import * as types from '../constants/ActionTypes';
 
-const rootReducer = combineReducers({
-  increment
-});
+const initialState = {
+  count: 0
+};
 
-export default rootReducer;
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case types.INCREMENT:
+      return Object.assign({}, state, { count: state.count + 1 });
+    default:
+      return state;
+  }
+}
