@@ -8,7 +8,7 @@
   },
   "globals": {
     "document": true,
-    "window": true,
+    "window": true
   },
   "rules":{
     "comma-dangle":0
