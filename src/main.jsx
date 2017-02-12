@@ -1,13 +1,17 @@
-import React from 'react';
 import { render } from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import Hello from './components/hello.jsx';
-import World from './components/world.jsx';
+import React from 'react';
+import App from './containers/App.jsx';
+import reducer from './reducers/index.js';
+
+
+const store = createStore(reducer);
 
 render(
-  <div>
-    <Hello />
-    <World />
-  </div>,
-  document.getElementById('app')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app'),
 );
