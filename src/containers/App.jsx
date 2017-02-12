@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import React from 'react';
-import Hello from '../components/hello.jsx';
-import World from '../components/world.jsx';
+import Hello from '../components/hello';
+import World from '../components/world';
 
 
 const App = () => (

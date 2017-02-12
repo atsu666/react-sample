@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import increment from './increment.js';
+import increment from './increment';
 
 const rootReducer = combineReducers({
   increment
