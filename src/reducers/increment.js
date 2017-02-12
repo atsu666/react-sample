@@ -1,14 +1,16 @@
-import * as types from '../constants/ActionTypes.js'
+import * as types from '../constants/ActionTypes.js';
 
 const initialState = [
   {
-    count:0
+    count: 0
   }
 ];
 
 export default function todos(state = initialState, action) {
-    switch (action.type) {
-        case types.INCREMENT:
-            return state.count++;
-    };
-};
+  switch (action.type) {
+    case types.INCREMENT:
+      return state.count + 1;
+    default:
+      return state.count;
+  }
+}
