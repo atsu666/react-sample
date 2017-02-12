@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { increment } from '../actions';
+import Hoge from '../components/hoge';
 
 class App extends React.Component {
   render() {
+    const props = this.props;
     return (<div>
-      <span>count: {this.props.count}</span>
+      <Hoge {...props}/>
       <button onClick={() => this.props.handleClick()}>増加</button>
     </div>);
   }
