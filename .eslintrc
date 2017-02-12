@@ -1,8 +1,11 @@
 
 {
   "extends": [
-    "airbnb-base"
+    "airbnb"
   ],
+  "settings": {
+    "import/resolver": "node"
+  },
   "env": {
     "browser": true
   },
@@ -11,6 +14,6 @@
     "window": true
   },
   "rules":{
-    "comma-dangle":0
+    "comma-dangle": 0
   }
 }
