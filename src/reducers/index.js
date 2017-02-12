@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import * as types from '../constants/ActionTypes';
 
 const initialState = {
@@ -12,4 +11,5 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
+
